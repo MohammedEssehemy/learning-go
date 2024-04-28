@@ -1,0 +1,1 @@
+module exmple.com/stringer

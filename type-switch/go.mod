@@ -1,0 +1,1 @@
+module example.com/type-switch

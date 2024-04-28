@@ -1,0 +1,13 @@
+go 1.22.2
+
+use ./hello
+
+use ./getting-started
+
+use ./greetings
+
+use ./tree
+
+use ./web-crawler
+
+use ./web-service-gin
