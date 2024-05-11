@@ -1,13 +1,15 @@
 go 1.22.2
 
-use ./hello
-
-use ./getting-started
-
-use ./greetings
-
-use ./tree
-
-use ./web-crawler
-
-use ./web-service-gin
+use (
+	./data-access
+	./fuzz
+	./generics
+	./getting-started
+	./gowiki
+	./greetings
+	./hello
+	./tree
+	./vuln-tutorial
+	./web-crawler
+	./web-service-gin
+)
