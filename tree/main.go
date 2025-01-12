@@ -9,16 +9,19 @@ import (
 // Walk walks the tree t sending all values
 // from the tree to the channel ch.
 func Walk(t *tree.Tree, ch chan int) {
+	// implement the walk function
+	// and send the values to the channel
 	_walk(t, ch)
 	close(ch)
 }
 
 func _walk(t *tree.Tree, ch chan int) {
-	if t != nil {
-		_walk(t.Left, ch)
-		ch <- t.Value
-		_walk(t.Right, ch)
+	if t == nil {
+		return
 	}
+	_walk(t.Left, ch)
+	ch <- t.Value
+	_walk(t.Right, ch)
 }
 
 // Same determines whether the trees
@@ -33,6 +36,10 @@ func Same(t1, t2 *tree.Tree) bool {
 		}
 	}
 	return true
+}
+
+func functionOfSomeType() int {
+	return 1
 }
 
 func main() {

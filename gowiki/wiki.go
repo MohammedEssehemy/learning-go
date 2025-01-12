@@ -14,7 +14,7 @@ type Page struct {
 	Body  []byte
 }
 
-var storage_path = "storage/"
+var storagePath = "storage/"
 
 var templates = template.Must(template.ParseGlob("templates/*.html"))
 
@@ -78,12 +78,12 @@ func renderPage(w http.ResponseWriter, tmpl string, p *Page) {
 }
 
 func (p *Page) save() error {
-	filename := storage_path + strings.ToLower(p.Title) + ".txt"
+	filename := storagePath + strings.ToLower(p.Title) + ".txt"
 	return os.WriteFile(filename, p.Body, 0600)
 }
 
 func loadPage(title string) (*Page, error) {
-	filename := storage_path + strings.ToLower(title) + ".txt"
+	filename := storagePath + strings.ToLower(title) + ".txt"
 	body, err := os.ReadFile(filename)
 	if err != nil {
 		return nil, err
